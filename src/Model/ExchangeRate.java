@@ -11,7 +11,7 @@ public class ExchangeRate {
         this.to = to;
         this.rate = rate;
     }
-    
+
     public Currency getFrom() {
         return from;
     }

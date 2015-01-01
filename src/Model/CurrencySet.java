@@ -1,24 +1,21 @@
 package Model;
 
-import java.util.Map;
-import java.util.HashMap;
+import java.util.HashSet;
+import java.util.Set;
 
 public class CurrencySet {
-    private final Map<String, Currency> map;
+
+    private final Set<Currency> currencySet;
 
     public CurrencySet() {
-        map = new HashMap<>();
+        currencySet = new HashSet<>();
     }
 
-    public Map<String, Currency> getMap() {
-        return map;
-    }
-    
     public void add(Currency currency) {
-        map.put(currency.getName(), currency);     
+        currencySet.add(currency);
     }
-    
-    public int size() {
-        return map.size();
+
+    public Currency[] toArray() {
+        return currencySet.toArray(new Currency[currencySet.size()]);
     }
 }
